@@ -1,0 +1,44 @@
+{
+  "kind": "collectionType",
+  "collectionName": "platillos",
+  "info": {
+    "name": "Platillo"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": false
+    },
+    "suffix": {
+      "type": "string"
+    },
+    "price": {
+      "type": "float"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "carta_categoria": {
+      "model": "carta-categoria",
+      "via": "platillos"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "imagen": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}

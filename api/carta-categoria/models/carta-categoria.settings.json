@@ -1,0 +1,43 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carta_categorias",
+  "info": {
+    "name": "cartaCategoria"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true
+  },
+  "attributes": {
+    "textId": {
+      "type": "uid",
+      "targetField": "title",
+      "required": false
+    },
+    "slug": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "parent": {
+      "model": "carta-categoria",
+      "via": "children"
+    },
+    "children": {
+      "collection": "carta-categoria",
+      "via": "parent"
+    },
+    "platillos": {
+      "via": "carta_categoria",
+      "collection": "platillo"
+    },
+    "restaurant": {
+      "model": "restaurant",
+      "via": "carta-categorias"
+    }
+  }
+}
