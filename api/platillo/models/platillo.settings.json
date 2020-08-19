@@ -39,6 +39,14 @@
       ],
       "plugin": "upload",
       "required": false
+    },
+    "visible": {
+      "type": "enumeration",
+      "enum": [
+        "si",
+        "no"
+      ],
+      "default": "si"
     }
   }
 }

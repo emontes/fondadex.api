@@ -20,6 +20,17 @@
     "title": {
       "type": "string"
     },
+    "title_image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false
+    },
     "description": {
       "type": "richtext"
     },
@@ -38,6 +49,10 @@
     "restaurant": {
       "model": "restaurant",
       "via": "carta-categorias"
+    },
+    "bgcolor": {
+      "type": "string"
     }
+
   }
 }
